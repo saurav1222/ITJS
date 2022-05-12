@@ -1,0 +1,35 @@
+"use strict";
+const prompt = require ('prompt-sync')();
+let array=[];
+let size = 5;
+
+for(let i=0; i<size; i++){
+    array[i]= prompt("Enter your number"+" "+ (i+1)+" ");
+}
+
+
+    let average = array.reduce((a, b) => parseInt(a) + parseInt(b)) / array.length;
+   
+
+ bblSort(array);
+function bblSort(array){
+    for (let a=0; a<array.length; a++){
+        for (let j=0; j<array.length-a-1;j++){
+            if(array[j]> array[j+1]){
+                let temp = array[j]
+                array[j]= array[j+1]
+                array[j+1] = temp;
+            }
+       
+        }
+    }
+}
+
+let max = array[4];
+let min = array[0];
+let median = array[2];
+console.log(max+ " is your maximum number");
+console.log(min+ " is your minimum number");
+console.log(median+" is your median number");
+console.log(average+ " is your average");
+
