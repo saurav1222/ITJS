@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quiz App</title>
+</head>
+<body>
+	<form onsubmit= "result();return false; ">
+	Q1. What is 5+5?<br>
+	<input type ="radio" name ="question1" >9<br>
+	<input type ="radio" name ="question1" id="correct1">10<br>
+	<input type ="radio" name ="question1" >11<br>
+	<input type ="radio" name ="question1" >12<br>
+	<br>
+
+	Q2. What is 5+6?<br>
+	<input type ="radio" name ="question2" >9<br>
+	<input type ="radio" name ="question2" >10<br>
+	<input type ="radio" name ="question2" id="correct2">11<br>
+	<input type ="radio" name ="question2" >12<br>
+	<br>
+
+	Q3. What is 4+5?<br>
+	<input type ="radio" name ="question3" id="correct3">9<br>
+	<input type ="radio" name ="question3" >10<br>
+	<input type ="radio" name ="question3" >11<br>
+	<input type ="radio" name ="question3" >12<br>
+	<br>
+
+	Q4. What is 5+7?<br>
+	<input type ="radio" name ="question4" >9<br>
+	<input type ="radio" name ="question4" >10<br>
+	<input type ="radio" name ="question4" >11<br>
+	<input type ="radio" name ="question4" id="correct4">12<br>
+	<br>
+
+	Q5. What is 5-4?<br>
+	<input type ="radio" name ="question5" >9<br>
+	<input type ="radio" name ="question5" id="correct5">1<br>
+	<input type ="radio" name ="question5" >11<br>
+	<input type ="radio" name ="question5" >12<br>
+	<br>
+	<input type = "submit" value="Submit" />
+	</form>
+
+	<script>
+		function result(){
+			let score=0;
+			if(document.getElementById('correct1').checked){
+				score++;
+			}
+			if(document.getElementById('correct2').checked){
+				score++;
+			}
+			if(document.getElementById('correct3').checked){
+				score++;
+			}
+			if(document.getElementById('correct4').checked){
+				score++;
+			}
+			if(document.getElementById('correct5').checked){
+				score++;
+			}
+
+			document.write("Your score is: "+score);
+			
+
+		}
+	</script>
+</body>
+</html>

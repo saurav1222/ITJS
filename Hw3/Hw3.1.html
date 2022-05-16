@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> 
+			HTML Elementary Database
+		</title>
+		<script>
+		function myFunction(){
+			let tbl = document.getElementById("myTable");
+			let row = tbl.insertRow();
+			let cell1 = row.insertCell();
+			let cell2 = row.insertCell();
+			let cell3 = row.insertCell();
+			let cell4 = row.insertCell();
+			cell1.innerHTML = document.getElementById("idName" ).value;
+			cell2.innerHTML = document.getElementById("idRoll" ).value;
+			cell3.innerHTML = document.getElementById("idPhone").value;
+			cell4.innerHTML = document.getElementById("idAddress" ).value;
+
+		} 
+		</script>
+	</head>
+	<body>
+		<form onsubmit="myFunction();return false; ">
+			<label>Name</label>
+				<input type="text" id="idName" name= "name" required/><br/>
+			<label>Rollno</label>
+				<input type="number" id="idRoll" name= "number" required/><br/>
+			<label>Phoneno</label>
+				<input type="phnum" id="idPhone" name= "phoneNumber" required/><br/>
+			<label>Address</label>
+				<input type= "text" id="idAddress" name ="address" required/><br/>
+			<input type ="submit" value="Add" />
+		</form>
+		
+		<h3> Enter Student Information </h3>
+
+	<!-- Table -->
+			<table border = 1 id="myTable">
+				<tr>
+					<td>Name</td>
+					<td>RollNo</td>
+					<td>PhoneNo</td>
+					<td>Address</td>
+				</tr>
+			</table>		
+	</body>
+</html>
